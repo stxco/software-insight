@@ -60,4 +60,37 @@ function renderSoftware(list) {
     });
 }
 
-renderSoftware(softwareData);
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  const filtered = softwareData.filter(item =>
+    item.name.toLowerCase().includes(query) ||
+    item.description.toLowerCase().includes(query)
+  );
+
+  renderSoftware(filtered);
+});
+
+const filtersContainer = document.getElementById("filters");
+
+const categories = ["All", ...new Set(softwareData.map(item => item.category))];
+
+categories.forEach(category => {
+  const btn = document.createElement("button");
+  btn.textContent = category;
+
+  btn.addEventListener("click", () => {
+    if (category === "All") {
+      renderSoftware(softwareData);
+    } else {
+      const filtered = softwareData.filter(
+        item => item.category === category
+      );
+      renderSoftware(filtered);
+    }
+  });
+
+  filtersContainer.appendChild(btn);
+});

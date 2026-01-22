@@ -13,3 +13,8 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
+
+#filters button {
+    margin-right: 5px;
+    padding: 6px 10px;
+}
