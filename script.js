@@ -31,6 +31,11 @@ const softwareList = document.getElementById("softwareList");
 function renderSoftware(list) {
   softwareList.innerHTML = "";
 
+  if (list.length === 0) {
+    softwareList.innerHTML = "<p>No software found.</p>";
+    return;
+  }
+  
   list.forEach(item => {
     const card = document.createElement("div");
     card.className = "software-card";
@@ -49,10 +54,10 @@ function renderSoftware(list) {
       </div>
     `;
 
-    const button = card.querySelector(".toggle-btn");
+    const btn = card.querySelector(".toggle-btn");
     const details = card.querySelector(".details");
 
-    button.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
       details.classList.toggle("hidden");
     });
 
@@ -94,3 +99,4 @@ categories.forEach(category => {
 
   filtersContainer.appendChild(btn);
 });
+

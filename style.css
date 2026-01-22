@@ -1,12 +1,10 @@
-.software-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 6px;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.hidden {
-    display: none;
+header {
+  margin-bottom: 20px;
 }
 
 button {
@@ -14,7 +12,30 @@ button {
     cursor: pointer;
 }
 
+.software-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    background: #f9f9f9;
+    transition: transform 0.2s;
+}
+
+.software-card:hover {
+  transform: scale(1.01);
+}
+
+.hidden {
+    display: none;
+}
+
 #filters button {
     margin-right: 5px;
     padding: 6px 10px;
+}
+
+#searchInput {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
 }
