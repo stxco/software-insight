@@ -1,10 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 header {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -22,7 +22,7 @@ button {
 }
 
 .software-card:hover {
-  transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 .hidden {
@@ -35,7 +35,9 @@ button {
 }
 
 #searchInput {
-  padding: 8px;
-  width: 100%;
-  max-width: 300px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }

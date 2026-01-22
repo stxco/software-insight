@@ -1,6 +1,6 @@
 # Software Insight Platform 
     
-    An interactive web application that allows users to explore and compare software 
+    An interactive web application that allows users to explore and compare software. 
 
 ## Features
 

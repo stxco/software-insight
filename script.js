@@ -35,7 +35,7 @@ function renderSoftware(list) {
     softwareList.innerHTML = "<p>No software found.</p>";
     return;
   }
-  
+
   list.forEach(item => {
     const card = document.createElement("div");
     card.className = "software-card";
@@ -100,3 +100,4 @@ categories.forEach(category => {
   filtersContainer.appendChild(btn);
 });
 
+renderSoftware(softwareData);
